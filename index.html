@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <!-- endbuild -->
 
     <title>Ristorante Con Fusion</title>
 </head>
@@ -30,9 +32,11 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginModal">
+                    <!-- <a href="" data-toggle="modal" data-target="#loginModal"> -->
+                    <a href="" id="loginBtn">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
+                    <!-- <button type="button" class="btn" id="loginBtn"><span class="fa fa-sign-in"></span> Login</button> -->
                 </span>
             </div>
         </div>
@@ -88,9 +92,10 @@
                     data-toggle="tooltip" data-placement="bottom" data-html="true" title="Call us at <br><strong>+852 12345678</strong>">
                 </div>
                 <div class="col-12 col-sm-3 ">
-                    <a href="" class="btn btn-block btn-warning" data-toggle="modal" data-target="#reserveModal">
-                        Reserve a Table
-                    </a>
+                    <!-- <a href="" class="btn btn-block btn-warning" data-toggle="modal" data-target="#reserveModal"> -->
+                        <!-- Reserve a Table -->
+                    <!-- </a> -->
+                    <button type="button" class="btn btn-block btn-warning" id="reserveBtn">Reserve a Table </button>
                 </div>
             </div>
         </div>
@@ -364,30 +369,12 @@
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-
-        $(document).ready(function() {
-            $('#mycarousel').carousel({interval: 2000});
-            $('#carouselButton').click(function(){
-                if ($('#carouselButton').children('span').hasClass('fa-pause')) {
-                    $('#mycarousel').carousel('pause');
-                    $('#carouselButton').children('span').removeClass('fa-pause');
-                    $('#carouselButton').children('span').addClass('fa-play');
-                }
-                else if ($('#carouselButton').children('span').hasClass('fa-play')) {
-                    $('#mycarousel').carousel('cycle');
-                    $('#carouselButton').children('span').removeClass('fa-play');
-                    $('#carouselButton').children('span').addClass('fa-pause');
-                }
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 
 </body>
 
